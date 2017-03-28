@@ -1,1 +1,1 @@
-# calculo_de_equilibrio
+# Cálculo de Equilíbrio
