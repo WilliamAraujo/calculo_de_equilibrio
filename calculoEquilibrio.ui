@@ -1,0 +1,2355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1259</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>212</green>
+        <blue>191</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>85</green>
+        <blue>63</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>113</green>
+        <blue>84</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>212</green>
+        <blue>191</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>212</green>
+        <blue>191</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>85</green>
+        <blue>63</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>113</green>
+        <blue>84</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>212</green>
+        <blue>191</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>85</green>
+        <blue>63</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>212</green>
+        <blue>191</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>85</green>
+        <blue>63</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>113</green>
+        <blue>84</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>85</green>
+        <blue>63</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>85</green>
+        <blue>63</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>170</green>
+        <blue>127</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>FEA UNICAMP</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(134, 134, 134);</string>
+  </property>
+  <widget class="QTabWidget" name="calculoEquilibrio">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>50</y>
+     <width>1271</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 247);
+</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_CalculoEquilibrio">
+    <attribute name="title">
+     <string>Cálculo de Equilíbrio</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_PropriedadesCriticas">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>30</y>
+       <width>941</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>1</width>
+       <height>1</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustIgnored</enum>
+     </property>
+     <row>
+      <property name="text">
+       <string>Componente 1</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 2</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 3</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 4</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 5</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 6</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 7</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 8</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 9</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Componente 10</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeft|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tc (K)</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Pc (bar)</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>w</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Xa</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Ya</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>P. sublimação</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Volume Molar</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>CO2</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string>304.1</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string>73.75</string>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string>0.225</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="0" column="5">
+      <property name="text">
+       <string>0.9734</string>
+      </property>
+     </item>
+     <item row="0" column="6">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="0" column="7">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string>Etanol</string>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string>513.9</string>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string>61.4</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string>0.644</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="1" column="5">
+      <property name="text">
+       <string>0.0207</string>
+      </property>
+     </item>
+     <item row="1" column="6">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="1" column="7">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>Agua</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string>647.3</string>
+      </property>
+     </item>
+     <item row="2" column="2">
+      <property name="text">
+       <string>221.2</string>
+      </property>
+     </item>
+     <item row="2" column="3">
+      <property name="text">
+       <string>0.344</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="2" column="5">
+      <property name="text">
+       <string>0.0059</string>
+      </property>
+     </item>
+     <item row="2" column="6">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="2" column="7">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="3" column="0">
+      <property name="text">
+       <string>Acido Felurico</string>
+      </property>
+     </item>
+     <item row="3" column="1">
+      <property name="text">
+       <string>854.6</string>
+      </property>
+     </item>
+     <item row="3" column="2">
+      <property name="text">
+       <string>36.4</string>
+      </property>
+     </item>
+     <item row="3" column="3">
+      <property name="text">
+       <string>1.194</string>
+      </property>
+     </item>
+     <item row="3" column="4">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="3" column="5">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="3" column="6">
+      <property name="text">
+       <string>1.446e-6</string>
+      </property>
+     </item>
+     <item row="3" column="7">
+      <property name="text">
+       <string>176.64</string>
+      </property>
+     </item>
+     <item row="4" column="0">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_TipoEquilibrio">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;William&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+selection-background-color: rgb(170, 85, 127);</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Sólido-Líquido</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sólido-Vapor</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Líquido-Líquido</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string extracomment="temperatura">Líquido-Vapor</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Temperatura">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>40</y>
+       <width>113</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>429.20</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Pressao">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>100</y>
+       <width>113</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>300</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_NumeroComponentes">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>151</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Num. Componentes</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Temperatura">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>20</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Temperatura (K)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_TipoEquilibrio">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Tipo de Equilíbrio</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Pressao">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>80</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Pressão (bar)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Relatorio">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Relatório</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_NumeroComponentes">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>131</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget_Relatorio">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>271</width>
+       <height>241</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_ComponentesSolidos">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>160</y>
+       <width>113</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_ComponentesSolidos">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>140</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Comp. Sólidos</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_Kaij">
+    <attribute name="title">
+     <string>Kaij</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_Kaij">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>1031</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string>0.0877</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string>0.1910</string>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string>0.5277</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string>15</string>
+      </property>
+     </item>
+     <item row="0" column="5">
+      <property name="text">
+       <string>16</string>
+      </property>
+     </item>
+     <item row="0" column="6">
+      <property name="text">
+       <string>17</string>
+      </property>
+     </item>
+     <item row="0" column="7">
+      <property name="text">
+       <string>18</string>
+      </property>
+     </item>
+     <item row="0" column="8">
+      <property name="text">
+       <string>19</string>
+      </property>
+     </item>
+     <item row="0" column="9">
+      <property name="text">
+       <string>110</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string>0.0877</string>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string>0.0231</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string>0.2341</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string>25</string>
+      </property>
+     </item>
+     <item row="1" column="5">
+      <property name="text">
+       <string>26</string>
+      </property>
+     </item>
+     <item row="1" column="6">
+      <property name="text">
+       <string>27</string>
+      </property>
+     </item>
+     <item row="1" column="7">
+      <property name="text">
+       <string>28</string>
+      </property>
+     </item>
+     <item row="1" column="8">
+      <property name="text">
+       <string>29</string>
+      </property>
+     </item>
+     <item row="1" column="9">
+      <property name="text">
+       <string>210</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>0.1910</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string>0.0231</string>
+      </property>
+     </item>
+     <item row="2" column="2">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="2" column="3">
+      <property name="text">
+       <string>0.0303</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string>35</string>
+      </property>
+     </item>
+     <item row="2" column="5">
+      <property name="text">
+       <string>36</string>
+      </property>
+     </item>
+     <item row="2" column="6">
+      <property name="text">
+       <string>37</string>
+      </property>
+     </item>
+     <item row="2" column="7">
+      <property name="text">
+       <string>38</string>
+      </property>
+     </item>
+     <item row="2" column="8">
+      <property name="text">
+       <string>39</string>
+      </property>
+     </item>
+     <item row="2" column="9">
+      <property name="text">
+       <string>310</string>
+      </property>
+     </item>
+     <item row="3" column="0">
+      <property name="text">
+       <string>0.5277</string>
+      </property>
+     </item>
+     <item row="3" column="1">
+      <property name="text">
+       <string>0.2341</string>
+      </property>
+     </item>
+     <item row="3" column="2">
+      <property name="text">
+       <string>0.0303</string>
+      </property>
+     </item>
+     <item row="3" column="3">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="3" column="4">
+      <property name="text">
+       <string>45</string>
+      </property>
+     </item>
+     <item row="3" column="5">
+      <property name="text">
+       <string>46</string>
+      </property>
+     </item>
+     <item row="3" column="6">
+      <property name="text">
+       <string>47</string>
+      </property>
+     </item>
+     <item row="3" column="7">
+      <property name="text">
+       <string>48</string>
+      </property>
+     </item>
+     <item row="3" column="8">
+      <property name="text">
+       <string>49</string>
+      </property>
+     </item>
+     <item row="3" column="9">
+      <property name="text">
+       <string>410</string>
+      </property>
+     </item>
+     <item row="4" column="0">
+      <property name="text">
+       <string>51</string>
+      </property>
+     </item>
+     <item row="4" column="1">
+      <property name="text">
+       <string>52</string>
+      </property>
+     </item>
+     <item row="4" column="2">
+      <property name="text">
+       <string>53</string>
+      </property>
+     </item>
+     <item row="4" column="3">
+      <property name="text">
+       <string>54</string>
+      </property>
+     </item>
+     <item row="4" column="4">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="4" column="5">
+      <property name="text">
+       <string>56</string>
+      </property>
+     </item>
+     <item row="4" column="6">
+      <property name="text">
+       <string>57</string>
+      </property>
+     </item>
+     <item row="4" column="7">
+      <property name="text">
+       <string>58</string>
+      </property>
+     </item>
+     <item row="4" column="8">
+      <property name="text">
+       <string>59</string>
+      </property>
+     </item>
+     <item row="4" column="9">
+      <property name="text">
+       <string>510</string>
+      </property>
+     </item>
+     <item row="5" column="0">
+      <property name="text">
+       <string>61</string>
+      </property>
+     </item>
+     <item row="5" column="1">
+      <property name="text">
+       <string>62</string>
+      </property>
+     </item>
+     <item row="5" column="2">
+      <property name="text">
+       <string>63</string>
+      </property>
+     </item>
+     <item row="5" column="3">
+      <property name="text">
+       <string>64</string>
+      </property>
+     </item>
+     <item row="5" column="4">
+      <property name="text">
+       <string>65</string>
+      </property>
+     </item>
+     <item row="5" column="5">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="5" column="6">
+      <property name="text">
+       <string>67</string>
+      </property>
+     </item>
+     <item row="5" column="7">
+      <property name="text">
+       <string>68</string>
+      </property>
+     </item>
+     <item row="5" column="8">
+      <property name="text">
+       <string>69</string>
+      </property>
+     </item>
+     <item row="5" column="9">
+      <property name="text">
+       <string>610</string>
+      </property>
+     </item>
+     <item row="6" column="0">
+      <property name="text">
+       <string>71</string>
+      </property>
+     </item>
+     <item row="6" column="1">
+      <property name="text">
+       <string>72</string>
+      </property>
+     </item>
+     <item row="6" column="2">
+      <property name="text">
+       <string>73</string>
+      </property>
+     </item>
+     <item row="6" column="3">
+      <property name="text">
+       <string>74</string>
+      </property>
+     </item>
+     <item row="6" column="4">
+      <property name="text">
+       <string>75</string>
+      </property>
+     </item>
+     <item row="6" column="5">
+      <property name="text">
+       <string>76</string>
+      </property>
+     </item>
+     <item row="6" column="6">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="6" column="7">
+      <property name="text">
+       <string>78</string>
+      </property>
+     </item>
+     <item row="6" column="8">
+      <property name="text">
+       <string>79</string>
+      </property>
+     </item>
+     <item row="6" column="9">
+      <property name="text">
+       <string>710</string>
+      </property>
+     </item>
+     <item row="7" column="0">
+      <property name="text">
+       <string>81</string>
+      </property>
+     </item>
+     <item row="7" column="1">
+      <property name="text">
+       <string>82</string>
+      </property>
+     </item>
+     <item row="7" column="2">
+      <property name="text">
+       <string>83</string>
+      </property>
+     </item>
+     <item row="7" column="3">
+      <property name="text">
+       <string>84</string>
+      </property>
+     </item>
+     <item row="7" column="4">
+      <property name="text">
+       <string>85</string>
+      </property>
+     </item>
+     <item row="7" column="5">
+      <property name="text">
+       <string>86</string>
+      </property>
+     </item>
+     <item row="7" column="6">
+      <property name="text">
+       <string>87</string>
+      </property>
+     </item>
+     <item row="7" column="7">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="7" column="8">
+      <property name="text">
+       <string>89</string>
+      </property>
+     </item>
+     <item row="7" column="9">
+      <property name="text">
+       <string>810</string>
+      </property>
+     </item>
+     <item row="8" column="0">
+      <property name="text">
+       <string>91</string>
+      </property>
+     </item>
+     <item row="8" column="1">
+      <property name="text">
+       <string>92</string>
+      </property>
+     </item>
+     <item row="8" column="2">
+      <property name="text">
+       <string>93</string>
+      </property>
+     </item>
+     <item row="8" column="3">
+      <property name="text">
+       <string>94</string>
+      </property>
+     </item>
+     <item row="8" column="4">
+      <property name="text">
+       <string>95</string>
+      </property>
+     </item>
+     <item row="8" column="5">
+      <property name="text">
+       <string>96</string>
+      </property>
+     </item>
+     <item row="8" column="6">
+      <property name="text">
+       <string>97</string>
+      </property>
+     </item>
+     <item row="8" column="7">
+      <property name="text">
+       <string>98</string>
+      </property>
+     </item>
+     <item row="8" column="8">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="8" column="9">
+      <property name="text">
+       <string>910</string>
+      </property>
+     </item>
+     <item row="9" column="0">
+      <property name="text">
+       <string>101</string>
+      </property>
+     </item>
+     <item row="9" column="1">
+      <property name="text">
+       <string>102</string>
+      </property>
+     </item>
+     <item row="9" column="2">
+      <property name="text">
+       <string>103</string>
+      </property>
+     </item>
+     <item row="9" column="3">
+      <property name="text">
+       <string>104</string>
+      </property>
+     </item>
+     <item row="9" column="4">
+      <property name="text">
+       <string>105</string>
+      </property>
+     </item>
+     <item row="9" column="5">
+      <property name="text">
+       <string>106</string>
+      </property>
+     </item>
+     <item row="9" column="6">
+      <property name="text">
+       <string>107</string>
+      </property>
+     </item>
+     <item row="9" column="7">
+      <property name="text">
+       <string>108</string>
+      </property>
+     </item>
+     <item row="9" column="8">
+      <property name="text">
+       <string>109</string>
+      </property>
+     </item>
+     <item row="9" column="9">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_Kaij">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>10</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Kaij</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_Kbij">
+    <attribute name="title">
+     <string>Kbij</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_Kbij">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>1031</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string>-0.01317</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string>0.1702</string>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string>0.2941</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string>15</string>
+      </property>
+     </item>
+     <item row="0" column="5">
+      <property name="text">
+       <string>16</string>
+      </property>
+     </item>
+     <item row="0" column="6">
+      <property name="text">
+       <string>17</string>
+      </property>
+     </item>
+     <item row="0" column="7">
+      <property name="text">
+       <string>18</string>
+      </property>
+     </item>
+     <item row="0" column="8">
+      <property name="text">
+       <string>19</string>
+      </property>
+     </item>
+     <item row="0" column="9">
+      <property name="text">
+       <string>110</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string>-0.01317</string>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string>0.1257</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string>25</string>
+      </property>
+     </item>
+     <item row="1" column="5">
+      <property name="text">
+       <string>26</string>
+      </property>
+     </item>
+     <item row="1" column="6">
+      <property name="text">
+       <string>27</string>
+      </property>
+     </item>
+     <item row="1" column="7">
+      <property name="text">
+       <string>28</string>
+      </property>
+     </item>
+     <item row="1" column="8">
+      <property name="text">
+       <string>29</string>
+      </property>
+     </item>
+     <item row="1" column="9">
+      <property name="text">
+       <string>210</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>0.1702</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string>0.1257</string>
+      </property>
+     </item>
+     <item row="2" column="2">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="2" column="3">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string>35</string>
+      </property>
+     </item>
+     <item row="2" column="5">
+      <property name="text">
+       <string>36</string>
+      </property>
+     </item>
+     <item row="2" column="6">
+      <property name="text">
+       <string>37</string>
+      </property>
+     </item>
+     <item row="2" column="7">
+      <property name="text">
+       <string>38</string>
+      </property>
+     </item>
+     <item row="2" column="8">
+      <property name="text">
+       <string>39</string>
+      </property>
+     </item>
+     <item row="2" column="9">
+      <property name="text">
+       <string>310</string>
+      </property>
+     </item>
+     <item row="3" column="0">
+      <property name="text">
+       <string>0.2941</string>
+      </property>
+     </item>
+     <item row="3" column="1">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="3" column="2">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="3" column="3">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="3" column="4">
+      <property name="text">
+       <string>45</string>
+      </property>
+     </item>
+     <item row="3" column="5">
+      <property name="text">
+       <string>46</string>
+      </property>
+     </item>
+     <item row="3" column="6">
+      <property name="text">
+       <string>47</string>
+      </property>
+     </item>
+     <item row="3" column="7">
+      <property name="text">
+       <string>48</string>
+      </property>
+     </item>
+     <item row="3" column="8">
+      <property name="text">
+       <string>49</string>
+      </property>
+     </item>
+     <item row="3" column="9">
+      <property name="text">
+       <string>410</string>
+      </property>
+     </item>
+     <item row="4" column="0">
+      <property name="text">
+       <string>51</string>
+      </property>
+     </item>
+     <item row="4" column="1">
+      <property name="text">
+       <string>52</string>
+      </property>
+     </item>
+     <item row="4" column="2">
+      <property name="text">
+       <string>53</string>
+      </property>
+     </item>
+     <item row="4" column="3">
+      <property name="text">
+       <string>54</string>
+      </property>
+     </item>
+     <item row="4" column="4">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="4" column="5">
+      <property name="text">
+       <string>56</string>
+      </property>
+     </item>
+     <item row="4" column="6">
+      <property name="text">
+       <string>57</string>
+      </property>
+     </item>
+     <item row="4" column="7">
+      <property name="text">
+       <string>58</string>
+      </property>
+     </item>
+     <item row="4" column="8">
+      <property name="text">
+       <string>59</string>
+      </property>
+     </item>
+     <item row="4" column="9">
+      <property name="text">
+       <string>510</string>
+      </property>
+     </item>
+     <item row="5" column="0">
+      <property name="text">
+       <string>61</string>
+      </property>
+     </item>
+     <item row="5" column="1">
+      <property name="text">
+       <string>62</string>
+      </property>
+     </item>
+     <item row="5" column="2">
+      <property name="text">
+       <string>63</string>
+      </property>
+     </item>
+     <item row="5" column="3">
+      <property name="text">
+       <string>64</string>
+      </property>
+     </item>
+     <item row="5" column="4">
+      <property name="text">
+       <string>65</string>
+      </property>
+     </item>
+     <item row="5" column="5">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="5" column="6">
+      <property name="text">
+       <string>67</string>
+      </property>
+     </item>
+     <item row="5" column="7">
+      <property name="text">
+       <string>68</string>
+      </property>
+     </item>
+     <item row="5" column="8">
+      <property name="text">
+       <string>69</string>
+      </property>
+     </item>
+     <item row="5" column="9">
+      <property name="text">
+       <string>610</string>
+      </property>
+     </item>
+     <item row="6" column="0">
+      <property name="text">
+       <string>71</string>
+      </property>
+     </item>
+     <item row="6" column="1">
+      <property name="text">
+       <string>72</string>
+      </property>
+     </item>
+     <item row="6" column="2">
+      <property name="text">
+       <string>73</string>
+      </property>
+     </item>
+     <item row="6" column="3">
+      <property name="text">
+       <string>74</string>
+      </property>
+     </item>
+     <item row="6" column="4">
+      <property name="text">
+       <string>75</string>
+      </property>
+     </item>
+     <item row="6" column="5">
+      <property name="text">
+       <string>76</string>
+      </property>
+     </item>
+     <item row="6" column="6">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="6" column="7">
+      <property name="text">
+       <string>78</string>
+      </property>
+     </item>
+     <item row="6" column="8">
+      <property name="text">
+       <string>79</string>
+      </property>
+     </item>
+     <item row="6" column="9">
+      <property name="text">
+       <string>710</string>
+      </property>
+     </item>
+     <item row="7" column="0">
+      <property name="text">
+       <string>81</string>
+      </property>
+     </item>
+     <item row="7" column="1">
+      <property name="text">
+       <string>82</string>
+      </property>
+     </item>
+     <item row="7" column="2">
+      <property name="text">
+       <string>83</string>
+      </property>
+     </item>
+     <item row="7" column="3">
+      <property name="text">
+       <string>84</string>
+      </property>
+     </item>
+     <item row="7" column="4">
+      <property name="text">
+       <string>85</string>
+      </property>
+     </item>
+     <item row="7" column="5">
+      <property name="text">
+       <string>86</string>
+      </property>
+     </item>
+     <item row="7" column="6">
+      <property name="text">
+       <string>87</string>
+      </property>
+     </item>
+     <item row="7" column="7">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="7" column="8">
+      <property name="text">
+       <string>89</string>
+      </property>
+     </item>
+     <item row="7" column="9">
+      <property name="text">
+       <string>810</string>
+      </property>
+     </item>
+     <item row="8" column="0">
+      <property name="text">
+       <string>91</string>
+      </property>
+     </item>
+     <item row="8" column="1">
+      <property name="text">
+       <string>92</string>
+      </property>
+     </item>
+     <item row="8" column="2">
+      <property name="text">
+       <string>93</string>
+      </property>
+     </item>
+     <item row="8" column="3">
+      <property name="text">
+       <string>94</string>
+      </property>
+     </item>
+     <item row="8" column="4">
+      <property name="text">
+       <string>95</string>
+      </property>
+     </item>
+     <item row="8" column="5">
+      <property name="text">
+       <string>96</string>
+      </property>
+     </item>
+     <item row="8" column="6">
+      <property name="text">
+       <string>97</string>
+      </property>
+     </item>
+     <item row="8" column="7">
+      <property name="text">
+       <string>98</string>
+      </property>
+     </item>
+     <item row="8" column="8">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="8" column="9">
+      <property name="text">
+       <string>910</string>
+      </property>
+     </item>
+     <item row="9" column="0">
+      <property name="text">
+       <string>101</string>
+      </property>
+     </item>
+     <item row="9" column="1">
+      <property name="text">
+       <string>102</string>
+      </property>
+     </item>
+     <item row="9" column="2">
+      <property name="text">
+       <string>103</string>
+      </property>
+     </item>
+     <item row="9" column="3">
+      <property name="text">
+       <string>104</string>
+      </property>
+     </item>
+     <item row="9" column="4">
+      <property name="text">
+       <string>105</string>
+      </property>
+     </item>
+     <item row="9" column="5">
+      <property name="text">
+       <string>106</string>
+      </property>
+     </item>
+     <item row="9" column="6">
+      <property name="text">
+       <string>107</string>
+      </property>
+     </item>
+     <item row="9" column="7">
+      <property name="text">
+       <string>108</string>
+      </property>
+     </item>
+     <item row="9" column="8">
+      <property name="text">
+       <string>109</string>
+      </property>
+     </item>
+     <item row="9" column="9">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_Kbij">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>10</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Kbij</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="button_AbrirArquivo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>12</y>
+     <width>113</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 247);</string>
+   </property>
+   <property name="text">
+    <string>Abrir Arquivo</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_SalvarArquivo">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>12</y>
+     <width>113</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 247);</string>
+   </property>
+   <property name="text">
+    <string>Salvar Arquivo</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_Calcular">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>12</y>
+     <width>113</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(247, 247, 247);
+</string>
+   </property>
+   <property name="text">
+    <string>Calcular</string>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_Informacoes">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>12</y>
+     <width>113</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 247);
+</string>
+   </property>
+   <property name="text">
+    <string>Informações</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_EquacaoEstado">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>20</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>321</width>
+     <height>41</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>321</width>
+     <height>41</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>14</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>Equação de Estado de Peng Robinson</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
