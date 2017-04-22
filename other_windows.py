@@ -18,10 +18,11 @@ import sys
 import time
 import numpy as np
 from datetime import datetime
+import threading
 import Calculo_Equilibrio
 import Ajuste_Parametros
-from DistUpgrade.DistUpgradeViewText import readline
-from ufw.util import open_file_read
+#from DistUpgrade.DistUpgradeViewText import readline
+#from ufw.util import open_file_read
 from builtins import int
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5 import uic
@@ -61,11 +62,20 @@ class app_calculoEquilibrio(QDialog):
 		NCS = int(self.mainLayout.lineEdit_ComponentesSolidos.text())
 
 		# Leitura do tipo de Equilibrio
-		TEQ = self.mainLayout.comboBox_TipoEquilibrio.currentIndex()
-		if   TEQ == 0: tipoEquilibrio = 'Sólido-Vapor'
-		elif TEQ == 1: tipoEquilibrio = 'Sólido-Líquido'
-		elif TEQ == 2: tipoEquilibrio = 'Líquido-Líquido'
-		elif TEQ == 3: tipoEquilibrio = 'Líquido-Vapor'
+		tEquilibrio = self.mainLayout.comboBox_TipoEquilibrio.currentIndex()
+		if (tEquilibrio == 0):
+			tipoEquilibrio = 'Sólido-Vapor'
+			TEQ = 1
+		elif(tEquilibrio == 1):
+			tipoEquilibrio = 'Sólido-Líquido'
+			TEQ = 2
+		elif(tEquilibrio == 2):
+			tipoEquilibrio = 'Líquido-Líquido'
+			TEQ = 3
+		elif(tEquilibrio == 3):
+			tipoEquilibrio = 'Líquido-Vapor'
+			TEQ = 4
+	
 		
 		# Declaracao e Inicializando dos vetores
 		nomeComponente = np.zeros(nc, dtype = ('a30'))	# String de 30 caracteres
@@ -91,7 +101,7 @@ class app_calculoEquilibrio(QDialog):
 			fracaoMolar_Y[i]		= float(self.mainLayout.tableWidget_PropriedadesCriticas.item(index_i, 5).text())
 			pressaoSublimacao[i]	= float(self.mainLayout.tableWidget_PropriedadesCriticas.item(index_i, 6).text())
 			Vmolar_soluto[i]		= float(self.mainLayout.tableWidget_PropriedadesCriticas.item(index_i, 7).text())
-		print('passou-1')
+
 		# Leitura ka
 		ka = np.zeros((nc, nc))
 		for i in range(1, nc):		# linhas
@@ -132,7 +142,7 @@ class app_calculoEquilibrio(QDialog):
 		OPCAO = 1
 		resposta_calculo = Calculo_Equilibrio.CalculaEquilibrioPR(NC, TEQ, pressao, temperatura, temperaturaCritica, pressaoCritica, fatorAcentrico, ka, kb, Vmolar_soluto, pressaoSublimacao, fracaoMolar_Y, fracaoMolar_X, NCS, OPCAO)
 
-		print('Calculo do Equilíbrio: ', '\n', 'x = ', resposta_calculo[0], '\n', 'y = ', '\n', resposta_calculo[1], '\n', 'iteração = ', resposta_calculo[2], '\n')
+		print('Calculo do Equilíbrio: ', '\n', 'y = ', resposta_calculo[0], '\n', 'x = ', '\n', resposta_calculo[1], '\n', 'iteração = ', resposta_calculo[2], '\n')
         
 	#############################################################################################	
 	def procura(self,data):
@@ -150,7 +160,6 @@ class app_calculoEquilibrio(QDialog):
 				temp = dados[i+1:length-1]
 				tamanho = len(temp)
 				resultado = ''
-
 				for i in range(tamanho):
 					resultado = resultado + temp[i]
 
@@ -200,7 +209,7 @@ class app_calculoEquilibrio(QDialog):
 			# Leitura do tipo de Equilibrio
 			TEQ = f.readline() 
 			resposta = self.procura(TEQ) 
-			print(resposta)
+			#print(resposta)
 			self.mainLayout.comboBox_TipoEquilibrio.setCurrentIndex(int(resposta))
 
 			# Leitura da Tabela ---> Lendo apenas as colunas    
@@ -257,8 +266,10 @@ class app_calculoEquilibrio(QDialog):
 		file.write('NumeroComponentesSolidos=' + NCS + '\n')
 
 		# Leitura do tipo de Equilibrio
-		tipoEquilibrio = self.mainLayout.comboBox_TipoEquilibrio.currentText()
-		file.write('tipoEquilibrio=' + tipoEquilibrio + '\n')
+		#tipoEquilibrio = self.mainLayout.comboBox_TipoEquilibrio.currentText()
+		#file.write('tipoEquilibrio=' + tipoEquilibrio + '\n')
+		# TEQ
+		file.write('TEQ=' + str(self.mainLayout.comboBox_TipoEquilibrio.currentIndex()) + '\n')
 
 		# Leitura da Tabela ---> Lendo apenas as colunas  
 		file.write('--- Leitura dos parametros dos componentes ---' + '\n')
@@ -274,7 +285,6 @@ class app_calculoEquilibrio(QDialog):
 			for j in range(10): # colunas
 				tabela_Kaij = self.mainLayout.tableWidget_Kaij.item(i,j).text()
 				file.write(tabela_Kaij + '\n')
-
 		# Leitura Kbij
 		file.write('--- Leitura dos parametros Kbij ---' + '\n')
 		for i in range(10):     # linhas
@@ -287,7 +297,21 @@ class app_calculoEquilibrio(QDialog):
 	#############################################################################################
 	@pyqtSlot()
 	def informacoes(self):
-		print("Informacoes")
+		self.mainLayout.listWidget_Relatorio.addItem("Kaij e Kbij: parametros de interação binária")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Tc: temperatura crítica")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Pc: pressão crítica")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("w: fator acentrico (adimensional)")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Xa: fração molar do componente em base")
+		self.mainLayout.listWidget_Relatorio.addItem("      livre do componente 1")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Ya: fração molar dos solventes em base")
+		self.mainLayout.listWidget_Relatorio.addItem("      livre dos solutos (sólidos)")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("P. sublimação e Volume Molar: soluto sólido")
 
 #################################################################################################
 class app_ajusteParametros(QDialog):
@@ -297,16 +321,17 @@ class app_ajusteParametros(QDialog):
 		self.mainLayout = Ui_Form2()
 		self.mainLayout.setupUi(self)
 		#self.mainLayout = loadUi('ajusteParametros.ui',self)
-		self.mainLayout.listWidget_Relatorio.addItem("Ajuste de Parametros")
 		self.mainLayout.button_Calcular.clicked.connect(self.calcular)
 		self.mainLayout.button_AbrirArquivo.clicked.connect(self.abrirArquivo)
 		self.mainLayout.button_SalvarArquivo.clicked.connect(self.salvarArquivo)
 		self.mainLayout.button_Informacoes.clicked.connect(self.informacoes)
+		self.mainLayout.button_limpar_relatorio.clicked.connect(self.limparRelatorio)
 		self.mainLayout.tableWidget_AjusteParametros.itemChanged.connect(self.adjustTableSize)
 		self.mainLayout.tableWidget_PropriedadesCriticas.itemChanged.connect(self.adjustTableSize)
 		# Fits initial contents
 		self.adjustTableSize()
 		self.mainLayout.tableWidget_AjusteParametros.resizeColumnsToContents()
+		self.mainLayout.tableWidget_PropriedadesCriticas.resizeColumnsToContents()
 		'''
 		self.mainLayout.tableWidget_PropriedadesCriticas.setColumnWidth(0, 70)
 		self.mainLayout.tableWidget_PropriedadesCriticas.setColumnWidth(1, 70)
@@ -318,12 +343,17 @@ class app_ajusteParametros(QDialog):
 		self.mainLayout.tableWidget_PropriedadesCriticas.horizontalHeaderItem(3).setTextAlignment(Qt.AlignHCenter)
 		
 		self.mainLayout.tableWidget_AjusteParametros.setWordWrap(True)
-    	'''       
+    	'''
+		
 	@pyqtSlot()
 	def adjustTableSize(self):
 		#print('Adjusting table size!')
 		self.mainLayout.tableWidget_AjusteParametros.resizeColumnsToContents()
 		self.mainLayout.tableWidget_PropriedadesCriticas.resizeColumnsToContents()
+
+	@pyqtSlot()
+	def limparRelatorio(self):
+		self.mainLayout.listWidget_Relatorio.clear()		
 		
 	@pyqtSlot()
 	def calcular(self):
@@ -353,16 +383,24 @@ class app_ajusteParametros(QDialog):
 
 		# Leitura da Função Objetivo
 		fObj = self.mainLayout.comboBox_FuncaoObjetivo.currentIndex()
-		if   fObj == 0: funcaoObjetivo = 'Pontos x & y'
-		elif fObj == 1: funcaoObjetivo = 'Pontos y'
-		elif fObj == 2: funcaoObjetivo = 'Pontos x'
+		if   fObj == 0: funcaoObjetivo = 'Pontos y'
+		elif fObj == 1: funcaoObjetivo = 'Pontos x'
+		elif fObj == 2: funcaoObjetivo = 'Pontos x & y'
 
 		# Leitura do tipo de Equilibrio
-		TEQ = self.mainLayout.comboBox_TipoEquilibrio.currentIndex()
-		if   TEQ == 0: tipoEquilibrio = 'Sólido  - Vapor'
-		elif TEQ == 1: tipoEquilibrio = 'Sólido  - Líquido'
-		elif TEQ == 2: tipoEquilibrio = 'Líquido - Líquido'
-		elif TEQ == 3: tipoEquilibrio = 'Líquido - Vapor'
+		tEquilibrio = self.mainLayout.comboBox_TipoEquilibrio.currentIndex()
+		if (tEquilibrio == 0):
+			tipoEquilibrio = 'Sólido-Vapor'
+			TEQ = 1
+		elif(tEquilibrio == 1):
+			tipoEquilibrio = 'Sólido-Líquido'
+			TEQ = 2
+		elif(tEquilibrio == 2):
+			tipoEquilibrio = 'Líquido-Líquido'
+			TEQ = 3
+		elif(tEquilibrio == 3):
+			tipoEquilibrio = 'Líquido-Vapor'
+			TEQ = 4
 
 		# Declaracao e Inicializando dos vetores
 		nomeComponente = np.zeros(3, dtype = ('a30'))	# String de 30 caracteres
@@ -427,12 +465,10 @@ class app_ajusteParametros(QDialog):
 		self.mainLayout.listWidget_Relatorio.addItem('x2 = ' + str(x2))
 		self.mainLayout.listWidget_Relatorio.addItem('y2 = ' + str(y2))
 		self.mainLayout.listWidget_Relatorio.addItem('pressao_subli = ' + str(pressao_sublimacao))
+		
+		resposta = Ajuste_Parametros.AjusteParametros(desvio_float, Ka_float, Ka_check, Kb_float, Kb_check, fObj, TEQ, temperaturaCritica, pressaoCritica, fatorAcentrico, Vmolar_soluto, counter, temperatura, pressao, x2, y2, pressao_sublimacao)
 
-		resposta = Ajuste_Parametros.AjusteParametros(desvio_float, Ka_float, Ka_check, Kb_float, Kb_check, fObj, TEQ, temperaturaCritica, pressaoCritica, 
-		fatorAcentrico, Vmolar_soluto, counter, temperatura, pressao, x2, y2, pressao_sublimacao)
-
-		print(resposta)
-
+		#print(resposta)
 
 	def procura(self,data):
 		length = len(data)
@@ -534,7 +570,7 @@ class app_ajusteParametros(QDialog):
 	def salvarArquivo(self):
 		self.mainLayout.listWidget_Relatorio.addItem('Salvar Arquivo')
 		name = QFileDialog.getSaveFileName(self, 'Save File','/home/dell/Documents/config_Ajuste_Parametros')
-		print(name)
+		#print(name)
 		file = open(name[0],'w')
 		file.write('ajuste_parametros' +'\n')
 		file.write('Data=' + '2017' +'\n')
@@ -552,7 +588,7 @@ class app_ajusteParametros(QDialog):
 		# fObj
 		file.write('fObj=' + str(self.mainLayout.comboBox_FuncaoObjetivo.currentIndex()) + '\n')
 		# TEQ
-		file.write('TEQ=' + str(self.mainLayout.comboBox_TipoEquilibrio.currentIndex()) + '\n')        
+		file.write('TEQ=' + str(self.mainLayout.comboBox_TipoEquilibrio.currentIndex()) + '\n')       
 		# Temperatura Critica
 		file.write('temperatura_critica' + '\n')
 		temperatura_critica = []
@@ -594,7 +630,28 @@ class app_ajusteParametros(QDialog):
 
 	@pyqtSlot()
 	def informacoes(self):
-		print("Informacoes")
+		self.mainLayout.listWidget_Relatorio.addItem("Ka e Kb: estimativa inicial da interação binária")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Fixo: fixar o valor do parametro Ka e/ou Kb")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Tc: temperatura crítica")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Pc: pressão crítica")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("w: fator acentrico (adimensional)")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Vol. Molar: volume molar do componente sólido")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("Escolha Ptos Exp: marcar com '1' os pontos a serem ajustados")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("T: temperatura do ponto experimental")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("P: pressão do ponto experimental")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("x(2) e y(2): fração molar do componente 2 nas")
+		self.mainLayout.listWidget_Relatorio.addItem("                   fases pesadas e leves")
+		self.mainLayout.listWidget_Relatorio.addItem(" ")
+		self.mainLayout.listWidget_Relatorio.addItem("P. sublimação : soluto sólido do componente 2")
 
 
 
